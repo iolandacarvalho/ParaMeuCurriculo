@@ -38,7 +38,7 @@ switch (bn1)
 {
 case "d":
     return2:
-    Console.Write("\nInforme o número que você gostaria de converter: ");
+    Console.Write("\nInforme o número decimal: ");
     if (!int.TryParse(Console.ReadLine(), out int nd))
     {
         Console.WriteLine("\n - Valor inválido. Tente novamente.\n -");
@@ -48,26 +48,24 @@ case "d":
     {
         return6:
         Console.WriteLine("\nPara qual base numérica você deseja converter esse número decimal?");
-        Console.WriteLine("(Informe: 'D' para 'decimal', 'O' para 'octal', 'B' para 'binário' ou 'H' para 'Hexadecimal')\n");
+        Console.WriteLine("(Informe: 'O' para 'octal', 'B' para 'binário' ou 'H' para 'Hexadecimal')\n");
         Console.Write("R: ");
         string bn2 = Console.ReadLine().ToLower();
         
         switch (bn2)
         {
-            case "d":
-
-                break;
-
             case "o":
-
+                
                 break;
 
             case "b":
-
+                
                 break;
 
             case "h":
-
+                string resultdh = nd.ToString("X");
+                Console.WriteLine($"O número decimal {nd} convertido para hexadecimal se torna {resultdh}.");
+                Console.WriteLine($"{nd} -> {resultdh}");
                 break;
 
             default:
@@ -89,16 +87,12 @@ case "o":
     {
         return7:
         Console.WriteLine("\nPara qual base numérica você deseja converter esse número octal?");
-        Console.WriteLine("(Informe: 'D' para 'decimal', 'O' para 'octal', 'B' para 'binário' ou 'H' para 'Hexadecimal')\n");
+        Console.WriteLine("(Informe: 'D' para 'decimal', 'B' para 'binário' ou 'H' para 'Hexadecimal')\n");
         Console.Write("R: ");
         string bn2 = Console.ReadLine().ToLower();
         switch (bn2)
         {
             case "d":
-
-                break;
-
-            case "o":
 
                 break;
 
@@ -129,7 +123,7 @@ case "b":
     {
         return8:
         Console.WriteLine("\nPara qual base numérica você deseja converter esse número binário?");
-        Console.WriteLine("(Informe: 'D' para 'decimal', 'O' para 'octal', 'B' para 'binário' ou 'H' para 'Hexadecimal')\n");
+        Console.WriteLine("(Informe: 'D' para 'decimal', 'O' para 'octal' ou 'H' para 'Hexadecimal')\n");
         Console.Write("R: ");
         string bn2 = Console.ReadLine().ToLower();
         switch (bn2)
@@ -139,10 +133,6 @@ case "b":
                 break;
 
             case "o":
-
-                break;
-
-            case "b":
 
                 break;
 
@@ -169,7 +159,7 @@ case "h":
     {
         return9:
         Console.WriteLine("\nPara qual base numérica você deseja converter esse número hexadecimal?");
-        Console.WriteLine("(Informe: 'D' para 'decimal', 'O' para 'octal', 'B' para 'binário' ou 'H' para 'Hexadecimal')\n");
+        Console.WriteLine("(Informe: 'D' para 'decimal', 'O' para 'octal' ou 'B' para 'binário')\n");
         Console.Write("R: ");
         string bn2 = Console.ReadLine().ToLower();
         switch (bn2)
@@ -186,10 +176,6 @@ case "h":
 
                 break;
 
-            case "h":
-
-                break;
-                
             default:
 
                 goto return9;
