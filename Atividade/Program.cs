@@ -55,7 +55,12 @@ case "d":
         switch (bn2)
         {
             case "o":
-                
+                int[] restos = new int[30];
+                int cont = 0;
+                while (nd / 8 < 1)
+                {
+                    
+                }
                 break;
 
             case "b":
