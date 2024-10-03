@@ -55,11 +55,20 @@ case "d":
         switch (bn2)
         {
             case "o":
-                int[] restos = new int[30];
-                int cont = 0;
-                while (nd / 8 < 1)
+                int resto;
+                string resultOctal = "";
+
+                do 
                 {
-                    
+                    resto = nd % 8;
+                    nd = nd / 8;
+                    resultOctal += resto.ToString();
+                }
+                while (nd != 0);
+
+                for (int cont = resultOctal.Length -1; cont >= 0; cont--)
+                {
+                    Console.Write(resultOctal[cont]);
                 }
                 break;
 
